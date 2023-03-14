@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 
-const Formulario = () => {
+const Formulario = ({pacientes, setPacientes}) => {
   const [nombre, setNombre] = useState('');
   const [propietario, setPropietario] = useState('');
   const [email, setEmail] = useState('');
@@ -20,6 +20,24 @@ const Formulario = () => {
       return
     }
     setError(false)
+
+    const objetoPaciente = {
+      nombre, 
+      propietario, 
+      email, 
+      fecha, 
+      sintomas
+    }
+
+    ///Se envia una copia del array pacientes y el nuevo objeto para que la funcion del hook lo agregue al arreglo original
+    setPacientes([...pacientes, objetoPaciente])
+
+    //Reiniciar el form
+    setNombre('')
+    setPropietario('')
+    setEmail('')
+    setFecha('')
+    setSintomas('')
   }
 
   return (
