@@ -6,9 +6,8 @@ function restar(numero1, numero2){
     return numero1 - numero2
 }
 
-export default sumar      //Solo funciona para una funcion
-
-/*export {
+//export default sumar      //Funciona para exportar solo una funcion
+export {
     sumar, 
     restar
-}*/
+}

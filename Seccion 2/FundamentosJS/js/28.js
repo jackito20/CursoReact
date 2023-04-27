@@ -1,7 +1,9 @@
-// Imports y Exports
-//import comoquieras from "./funciones.js"          //Cuando se usa export default (se puede importar con cualquier nombre)
-import sumar from "./funciones.js"
+//Imports y Exports
 
-const resultado = sumar(20, 30)
+/*import comoquieras from './funciones.js'      //Cuando exportas una sola funcion puedes renombrar la funcion en el import 
+const resultado = comoquieras(20,30)*/
+
+import { sumar as suma} from './funciones.js'
+const resultado = suma(20,30)
 
 console.log(resultado)
